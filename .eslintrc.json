@@ -35,6 +35,7 @@
         "code": 80
       }
     ],
-    "@typescript-eslint/no-misused-promises": "off"
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-extraneous-class": "off"
   }
 }

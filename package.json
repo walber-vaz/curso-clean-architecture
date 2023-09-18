@@ -2,9 +2,9 @@
   "name": "curso-clean-architecture",
   "version": "1.0.0",
   "description": "Estudo sobre clean architecture",
-  "main": "src/server.ts",
+  "main": "src/index.ts",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --respawn --ignore-watch node_modules src/index.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --ignore-watch node_modules src/index.ts",
     "build": "if [ -d dist ]; then rm -rf dist; fi && tsc && tsc-alias",
     "test": "jest --passWithNoTests --verbose",
     "test:watch": "jest --watch --passWithNoTests --verbose",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.5",
     "@types/node": "^20.6.2",
+    "@types/terminal-kit": "^2.5.2",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
@@ -36,5 +37,8 @@
     "tsc-alias": "^1.8.7",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "terminal-kit": "^3.0.0"
   }
 }
