@@ -2,6 +2,8 @@ import { terminal } from 'terminal-kit';
 
 import { TerminalUtil } from '@/utils/terminalUtils';
 
+import { menuFundamentos } from './menuFundamentos';
+
 export async function menuPrincipal(): Promise<void> {
   TerminalUtil.title('Menu Principal');
 
@@ -10,7 +12,7 @@ export async function menuPrincipal(): Promise<void> {
 
   switch (response.selectedIndex) {
     case 0:
-      console.log('Fundamentos');
+      await menuFundamentos();
       break;
     case 1:
       console.log('Saindo...');
@@ -20,4 +22,6 @@ export async function menuPrincipal(): Promise<void> {
       console.log('Opção inválida');
       break;
   }
+
+  await menuPrincipal();
 }
